@@ -9,7 +9,6 @@ st.markdown("Uma visão interativa dos dados demográficos por regiões urbanas.
 
 # 2. Carregar os dados
 @st.cache_data
-@st.cache_data
 def carregar_dados():
     # Agora o código procura a planilha na mesma pasta onde ele está:
     arquivo = "CENSO2022_GEMINI.xlsx - CG_CENSO_2022_GEMINI.csv"
@@ -97,3 +96,4 @@ with aba3:
 
 
 st.sidebar.info("Dashboard gerado com Streamlit e Plotly com base nos dados do Censo IBGE 2022 para Campo Grande/MS.")
+
