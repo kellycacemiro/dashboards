@@ -9,12 +9,12 @@ st.markdown("Uma visão interativa dos dados demográficos por regiões urbanas.
 
 # 2. Carregar os dados
 @st.cache_data
+@st.cache_data
 def carregar_dados():
-    arquivo = r"D:\KELLY CACEMIRO\DASHBOARDS\CENSO2022_GEMINI.xlsx - CG_CENSO_2022_GEMINI.csv"
+    # Agora o código procura a planilha na mesma pasta onde ele está:
+    arquivo = "CENSO2022_GEMINI.xlsx - CG_CENSO_2022_GEMINI.csv"
     
-    # Adicionando o sep=';' para ler as colunas corretamente:
     df = pd.read_csv(arquivo, encoding='latin-1', sep=';')
-    
     return df
     
 
@@ -94,5 +94,6 @@ with aba3:
     fig_moradores = px.bar(df_moradores, x='MÉDIA DE MORADORES - 2022', y='NOME', orientation='h',
                            color='MÉDIA DE MORADORES - 2022', color_continuous_scale='Teal')
     st.plotly_chart(fig_moradores, use_container_width=True)
+
 
 st.sidebar.info("Dashboard gerado com Streamlit e Plotly com base nos dados do Censo IBGE 2022 para Campo Grande/MS.")
