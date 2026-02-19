@@ -97,3 +97,4 @@ with aba3:
 
 st.sidebar.info("Dashboard gerado com Streamlit e Plotly com base nos dados do Censo IBGE 2022 para Campo Grande/MS.")
 
+
